@@ -1,4 +1,4 @@
-''' connect gnd to ground, echo to sen, trig to sqr2 and od1 to vcc of srf5
+''' Important : connect gnd to ground, echo to sen, trig to sqr2 and od1 to vcc of srf5
 '''
 
 from Tkinter import *
