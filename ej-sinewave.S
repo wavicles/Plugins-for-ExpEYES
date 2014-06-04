@@ -1,4 +1,4 @@
-; generates sine wave on the R-2R DAC connected on port B
+; Generates sine wave on the R-2R DAC connected on port B
 
 #include <avr/io.h>
 
