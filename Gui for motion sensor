@@ -179,5 +179,5 @@ msgwin.pack(side=LEFT, anchor = S, fill=BOTH, expand=1)
 
 
 eyeplot.pop_image('pics/pend-wave.png', _('Position Time Graph'))
-root.title(_('Position Time Graph'))
+root.title(_('Position  Time Graph'))
 root.mainloop()
