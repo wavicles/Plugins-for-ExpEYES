@@ -43,7 +43,7 @@ class Pend:
 		self.tv = [ [], [] ]
 		try:
 			self.MAXTIME = int(DURATION.get())
-			g.setWorld(0, self.MINY, self.MAXTIME, self.MAXY,_('Time'),_('Volt'))
+			g.setWorld(0, self.MINY, self.MAXTIME, self.MAXY,_('Time'),_('Dist'))
 			Dur.config(state=DISABLED)
 			self.msg(_('Starting the Measurements'))
 			root.after(self.TIMER, self.update)
