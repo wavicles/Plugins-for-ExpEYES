@@ -19,15 +19,15 @@ data = [] # Of the form, [ [x1,y1], [x2,y2],....] where x and y are vectors
 outmask = 1
 
 def fset(f):
-s = '%5.1f'%f
-Freq.delete(0,END)
-Freq.insert(0,s)
+    s = '%5.1f'%f
+    Freq.delete(0,END)
+    Freq.insert(0,s)
 
 def measure_phase():
-global data, NP, delay
-data = []
-phsum = 0.0
-n = 0
+    global data, NP, delay
+    data = []
+    phsum = 0.0
+  n = 0
 try:
 fr = float(Freq.get())
 fs = p.set_sqr1(fr)
