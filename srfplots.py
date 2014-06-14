@@ -35,7 +35,7 @@ savefig('plot_1.png')
 #open a second figure
 figure(2)
 
-#use the subplot function to generate multiple panels within the same plotting window
+'''#use the subplot function to generate multiple panels within the same plotting window
 subplot(3,1,1)
 #plot black stars with dotted lines
 plot(x, xsquareroot,'k*:')
@@ -52,4 +52,5 @@ savefig('plot_3.png')
 #show() should be the last line
 show()
 plot(ta,da)
+'''
 show()
