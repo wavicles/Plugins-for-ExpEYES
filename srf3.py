@@ -4,7 +4,7 @@ p = expeyes.eyesj.open()
 
 p.set_state(10,1)
 
-f = open('srf.dat','w')
+f = open('srf.dat','r')   # errors were beacuse file in only in write mode so changed to 'r+'
 
 ta = []
 da = []
