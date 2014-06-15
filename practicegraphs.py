@@ -9,11 +9,11 @@ figure(1)
 #basic plot
 plot(x,xsquare)
 #add a label to the x axis
-xlabel('abscissa')
+xlabel('Time')
 #add a label to the y axis
-ylabel('ordinate')
+ylabel('Position')
 #add a title
-title('A practice plot.')
+title('Position-Time Graph.')
 #save the figure to the current diretory as a png file
 savefig('plot_1.png')
 #open a second figure
@@ -23,9 +23,9 @@ figure(2)
 #and another with green plus signs joined by a dashed curve
 plot(x, xsquare, 'ro', x, xcube,'g+--')
 #x and y labels, title
-xlabel('abscissa')
+xlabel('t')
 ylabel('ordinate')
-title('More practice.')
+title('Motion Graph.')
 #add a legend
 legend(('squared', 'cubed'))
 #save the figure
@@ -35,15 +35,15 @@ figure(3)
 subplot(3,1,1)
 #plot black stars with dotted lines
 plot(x, xsquareroot,'k*:')
-title('square roots')
+title('Motion Graph 1')
 subplot(3,1,2)
 #plot red right-pointing triangles with dashed lines
 plot(x, xsquare,'r>-')
-title('squares')
+title('Motion Graph 2')
 subplot(3,1,3)
 #plot magenta hexagons with a solid line
 plot(x, xcube,'mh-')
-title('cubes')
+title('Motion Graph 3')
 savefig('plot_3.png')
 #show() should be the last line
 show()
