@@ -58,9 +58,6 @@ subplot(312), title("velocity"),
 plot(t(1:len-1),v,'g');
 subplot(313), title("acceleration"),
 plot(t(1:len-2),a,'r');
-
-
-
 import numpy as np
 import matplotlib.pyplot as plt
 with open('data.dat', 'r') as f2:
