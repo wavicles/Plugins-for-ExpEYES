@@ -68,7 +68,7 @@ class Pend:
 	def update(self):
 		if self.running == False:
 			return
-		t = p.multi_r2rtime(0,1)
+		t = p.multi_r2rtime(0,1)  # time measurement function skips one rising edge
 		if t > 0:
 			s = _('%5.1f mS\n') %(t*1.0e-3)
 			print s
