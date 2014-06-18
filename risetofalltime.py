@@ -1,5 +1,5 @@
 '''
-r2ftime(in1, in2) returns the microseconds elapsed from a rising edge on input1 to a falling edge of input2, 
+r2ftime(in1, in2) returns the time in  microseconds elapsed from a rising edge on input1 to a falling edge of input2, 
 they could be the same
 '''
 
