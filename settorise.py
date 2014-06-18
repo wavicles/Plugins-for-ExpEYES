@@ -1,5 +1,5 @@
 '''
-set2rtime(out, in) returns the microseconds elapsed from setting the specified output
+set2rtime(out, in) returns the time in  microseconds elapsed from setting the specified output
 to a rising edge on input. 
 Similar functions are: clr2rtime(out, in) , set2ftime(out, in) and clr2ftime(out, in)
 
