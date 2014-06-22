@@ -9,10 +9,10 @@ p = expeyes.eyesj.open()
 from pylab import *
 t1,v1,t2,v2 = p.capture2(1, 2, 300, 100)
 figure(1)
-plot(t1,v1)
+plot(t1,v1)     # Plots a sine wave
 figure(2)
-plot(t1, v1, t2, v2)
+plot(t1, v1, t2, v2) # Plots the original sine wave and a wave with 90 degree phase difference
 figure(3)
-plot(v1, v2)
+plot(v1, v2) # Plots Lissajous Figure....in this case it is an ellipse
 show()
 
