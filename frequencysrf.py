@@ -23,6 +23,16 @@ while et < 30:
 	time.sleep(0.1)
 
 print p.get_frequency(3) # to get frequency at pin 3
-
+'''
+to fit the sine wave for spring expt.
+'''
+import expeyes.eyemath as em
+p = expeyes.eyesj.open()
+t,v= p.capture(3,400,100)
+vfit, par = em.fit_sine(t,v)
+print par
+print(t,v)
+plot(t, vfit)
+show()
 plot(ta,da)
 show()
