@@ -22,7 +22,7 @@ while et < 30:
 	print s
 	time.sleep(0.1)
 
-print p.get_frequency(3) # to get frequency at pin 3
+print p.get_frequency(3) # to get frequency at pin 3 this is giving time out error
 '''
 to fit the sine wave for spring expt.
 '''
