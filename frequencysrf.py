@@ -30,7 +30,7 @@ import expeyes.eyemath as em
 p = expeyes.eyesj.open()
 t,v= p.capture(3,400,100)
 vfit, par = em.fit_sine(t,v)
-print par
+print par[1]   # second parameter is frequency
 print(t,v)
 plot(t, vfit)
 show()
