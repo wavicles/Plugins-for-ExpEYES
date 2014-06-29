@@ -13,7 +13,7 @@ strt = time.time()
 et =0
 while et < 20:
       dist1 = p.srfechotime(8,3) # used channel 8 i.e. SQR1 and 3 i.e. IN1
-      dist2 = p.srfechotime(9,0)  #  used channel 9 i.e. SQR2 and 0 i.e. SEN
+      dist2 = p.srfechotime(9,0)  #  used channel 9 i.e. SQR2 and 0 i.e. SEN channel 5 can also be used
       et = time.time() - strt
       ta.append(et)
       da1.append(dist1)
