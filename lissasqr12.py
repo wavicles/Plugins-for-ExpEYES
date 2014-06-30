@@ -9,7 +9,7 @@ p = expeyes.eyesj.open()
 
 #p.set_sqr1(8000)
 #p.set_sqr2(4000)
-p.set_sqrs(8000,13)
+p.set_sqrs(8000,13) #econd parameter is phase difference in percentage
 
 
 t1,v1,t2,v2 = p.capture2(1, 2, 400, 16)
