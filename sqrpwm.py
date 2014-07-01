@@ -10,7 +10,7 @@ import expeyes.eyesj
 p = expeyes.eyesj.open()
 
 from pylab import *
-p.set_sqr1_pwm(25)          # 25% duty cycle wave on SQR1. Default frequency 488 Hz
+p.set_sqr1_pwm(35)          # 35% duty cycle wave on SQR1. Default frequency 488 Hz
 print p.get_frequency(6)
 p.set_sqr1_pwm(25, 13)      # 25% duty cycle wave on SQR1. requency 488 Hz
 print p.get_frequency(6)
