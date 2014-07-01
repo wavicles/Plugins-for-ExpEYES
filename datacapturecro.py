@@ -172,6 +172,6 @@ mf.pack(side=TOP,  fill = BOTH, expand = 1)
 msgwin = Label(mf,text=_('Message'), fg = 'blue')
 msgwin.pack(side=LEFT)
 
-root.title(_('EYES-Junior: Four Channel Data Logger'))
+root.title(_('ExpEYES-Data Plotter Plugin))
 root.mainloop()
 
