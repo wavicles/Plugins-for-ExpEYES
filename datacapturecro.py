@@ -54,7 +54,7 @@ class Logger:
 		for k in range(5): CB[k].config(state = NORMAL)
 		Total.config(state=NORMAL)
 		Dur.config(state=NORMAL)
-		self.running = False
+		self.running = True
 
 	def update(self):
 		if self.running == False:
