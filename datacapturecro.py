@@ -1,10 +1,7 @@
 '''
 with this program expeyes can be used as a data loger to access all inputs of ExpEYES
 '''
-import gettext
-gettext.bindtextdomain("expeyes")
-gettext.textdomain('expeyes')
-_ = gettext.gettext
+
 
 from Tkinter import *
 import expeyes.eyesj as eyes, expeyes.eyeplot as eyeplot, expeyes.eyemath as eyemath, time, sys
