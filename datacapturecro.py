@@ -1,5 +1,5 @@
 '''
-with this program expeyes can be used as a data loger
+with this program expeyes can be used as a data loger to access all inputs of ExpEYES
 '''
 import gettext
 gettext.bindtextdomain("expeyes")
