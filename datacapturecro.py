@@ -29,7 +29,13 @@ class Logger:
 		for ch in range(NCHAN):
 			self.chinfo.append([False, [[],[]], 0])  # Active, Data, Start Time
 
-	
+	def start(self):
+		self.running = False					# Assume no channel is selected
+		for ch in range(NCHAN):
+			self.chinfo[ch][1] = [ [], [] ]		# Clear old data
+			if CH[ch].get() == 1:
+				self.chinfo[ch][0] = True
+				self.running = True
 			else:
 				self.chinfo[ch][0] = False
 		try:
