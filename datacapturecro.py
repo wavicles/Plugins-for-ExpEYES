@@ -17,7 +17,7 @@ HEIGHT = 400   # height
 class Logger:
 	chan = [1,2,3,4,5]
 	tv = [ [], [] ]						# Lists for Time & Voltage
-	MAXTIME = 10  	    # Maximum time, user can set
+	MAXTIME = 10  	    # Maximum time, user can change
 	TIMER = 500
 	MINY = -5			# could be 0
 	MAXY = 5.0
@@ -29,13 +29,7 @@ class Logger:
 		for ch in range(NCHAN):
 			self.chinfo.append([False, [[],[]], 0])  # Active, Data, Start Time
 
-	def start(self):
-		self.running = False					# Assume no channel is selected
-		for ch in range(NCHAN):
-			self.chinfo[ch][1] = [ [], [] ]		# Clear old data
-			if CH[ch].get() == 1:
-				self.chinfo[ch][0] = True
-				self.running = True
+	
 			else:
 				self.chinfo[ch][0] = False
 		try:
