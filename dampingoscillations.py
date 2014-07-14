@@ -139,6 +139,6 @@ msgwin = Label(mf,text=_('Message'), fg = 'blue')
 msgwin.pack(side=LEFT, anchor = S, fill=BOTH, expand=1)
 
 
-#eyeplot.pop_image('pics/pend-wave.png', _('Pendulum Oscillations'))
+#eyeplot.pop_image('pics/imagename.png', _('Image title'))  create  a schematic digram for this experiment
 root.title(_('Damped oscillations of Spring '))
 root.mainloop()
