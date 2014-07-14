@@ -140,5 +140,5 @@ msgwin.pack(side=LEFT, anchor = S, fill=BOTH, expand=1)
 
 
 #eyeplot.pop_image('pics/pend-wave.png', _('Pendulum Oscillations'))
-root.title(_('Damped oscillations of Spring in various media'))
+root.title(_('Damped oscillations of Spring '))
 root.mainloop()
