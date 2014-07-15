@@ -1,6 +1,6 @@
 '''
 expEYES program
-Dampaed oscillations of spring in various media
+Dampaed oscillations of spring in various media like air, water oil or glycerine
 '''
 import gettext
 gettext.bindtextdomain("expeyes")
