@@ -30,7 +30,10 @@ class Spring:
 		else:
 			self.msg(_('Failed to fit data'))
 
-	
+	def xmgrace(self):
+		if self.running == True:
+			return
+		p.grace([self.tv])
 
 	def start(self):
 		self.running = True
