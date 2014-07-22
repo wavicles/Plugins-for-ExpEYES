@@ -59,7 +59,7 @@ class Pend:
 		self.msg(_('Starting the Measurements'))
 		Result.delete(1.0, END)
 		root.after(self.TIMER, self.update)
-
+i
 	def stop(self):
 		p.set_sqr1(-1)
 		self.running = False
@@ -87,6 +87,7 @@ class Pend:
 			self.msg(_('Timeout Error. Check Connections'),'red')
 			return 
 		root.after(self.TIMER, self.update)
+
 
 	def save(self):
 		try:
