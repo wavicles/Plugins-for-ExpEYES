@@ -12,7 +12,7 @@ da = []
 strt = time.time()
 
 et =0
-while et < 15:
+while et < 10:
 	dist = p.srfechotime(8,3)
 	et = time.time() - strt
 	ta.append(et)
@@ -22,6 +22,8 @@ while et < 15:
 	f.write(s + '\n')
 	print s
 	time.sleep(0.1)
+
+
 # Calculate Velocity and Acceleration -----------------------------------------
 print "Calculating velocity and acceleration..."
 va = []
@@ -30,6 +32,7 @@ for i in range(0,len(da)-1):
     # Calculate Velocity
     v = (da[i+1]-da[i])/(ta[i+1]-ta[i])
     va.append(v)
+#aa= diff(va)     # this can be used to quickly calculate acceleration from va values
     
     # Calculate Acceleration
     if i < len(da)-2:
@@ -39,20 +42,20 @@ for i in range(0,len(da)-1):
 #Create Plots ----------------------------------------------------------------
 
 subplot(3,1,1)
-plot(ta,da,'r')   # Position plot
+plot(ta,da,'r')   #Acceleration Plot
 title('Position-Time Graph')
 xlabel('Time')
 ylabel('Position')
 
 subplot(3,1,2)
-plot(ta[1:],va)  	# Velocity Plot
+plot(ta[1:],va)
 title('Velocity-Time Graph')
 xlabel('time')
 ylabel('Velocity')
 
 subplot(3,1,3)
-plot(ta[2:],aa)		# Acceleration Plot
-title('Acceleration-Time Graph')
+plot(ta[2:],aa)
+title('Acceleration of IR')
 xlabel('time')
 ylabel('Acceleration')
 
