@@ -39,20 +39,20 @@ for i in range(0,len(da)-1):
 #Create Plots ----------------------------------------------------------------
 
 subplot(3,1,1)
-plot(ta,da,'r')   #Acceleration Plot
+plot(ta,da,'r')   # Position plot
 title('Position-Time Graph')
 xlabel('Time')
 ylabel('Position')
 
 subplot(3,1,2)
-plot(ta[1:],va)
+plot(ta[1:],va)  	# Velocity Plot
 title('Velocity-Time Graph')
 xlabel('time')
 ylabel('Velocity')
 
 subplot(3,1,3)
-plot(ta[2:],aa)
-title('Acceleration of IR')
+plot(ta[2:],aa)		# Acceleration Plot
+title('Acceleration-Time Graph')
 xlabel('time')
 ylabel('Acceleration')
 
