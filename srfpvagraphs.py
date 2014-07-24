@@ -51,7 +51,7 @@ xlabel('time')
 ylabel('Velocity')
 
 subplot(3,1,3)
-plot(t[2:],aa)
+plot(ta[2:],aa)
 title('Acceleration of IR')
 xlabel('time')
 ylabel('Acceleration')
