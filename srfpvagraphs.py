@@ -10,7 +10,7 @@ f = open('srf.dat','r+')
 ta = []
 da = []
 strt = time.time()
-
+vs = 0.034000
 et =0
 while et < 10:
 	dist = p.srfechotime(9,0)
