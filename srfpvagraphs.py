@@ -13,7 +13,7 @@ strt = time.time()
 
 et =0
 while et < 10:
-	dist = p.srfechotime(8,3)
+	dist = p.srfechotime(9,0)
 	et = time.time() - strt
 	ta.append(et)
 	da.append(dist)
