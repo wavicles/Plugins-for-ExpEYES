@@ -43,23 +43,26 @@ for i in range(0,len(da)-1):
 #Create Plots ----------------------------------------------------------------
 
 subplot(3,1,1)
-plot(ta,da,'r')   #Acceleration Plot
+#figure(1)
+plot(ta,da,'r')   #position Plot
 title('Position-Time Graph')
 xlabel('Time')
 ylabel('Position')
 
 subplot(3,1,2)
+#figure(2)
+
 plot(ta[1:],va)
 title('Velocity-Time Graph')
-xlabel('time')
+xlabel('Time')
 ylabel('Velocity')
 
+#figure(3)
 subplot(3,1,3)
 plot(ta[2:],aa)
-title('Acceleration of IR')
-xlabel('time')
+title('Acceleration-Time Graph')
+xlabel('Time')
 ylabel('Acceleration')
 
+plt.tight_layout()    #this function from matplotlib provides spacing between subgraphs
 show()
-
-# graphs labels are overlaping need to have extra spacing
