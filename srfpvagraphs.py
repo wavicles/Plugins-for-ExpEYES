@@ -61,4 +61,4 @@ ylabel('Acceleration')
 
 show()
 
-
+# graphs labels are overlaping need to have extra spacing
