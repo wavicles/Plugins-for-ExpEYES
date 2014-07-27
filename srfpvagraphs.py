@@ -14,10 +14,11 @@ vs = 0.034000
 et =0
 while et < 10:
 	dist = p.srfechotime(9,0)
+	pos = (dist-400) *vs/2
 	et = time.time() - strt
 	ta.append(et)
-	da.append(dist)
-	s = '%5.3f\t %d'%(et,dist)
+	da.append(pos)
+	s = '%5.3f\t %d'%(et,pos)
 	#s = '%d\t %d'%(et,dist)
 	f.write(s + '\n')
 	print s
