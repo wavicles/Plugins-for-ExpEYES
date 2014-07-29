@@ -28,7 +28,32 @@ while 1:
     if tm > DURATION:
        break
 
+subplot(3,1,1)
+#figure(1)
+plot(ta,va,'r') #position Plot
+title('Pendulum - 1')
+xlabel('Time')
+ylabel('Displacement')
 
+subplot(3,1,2)
+#figure(2)
+
+plot(tb,vb, 'b')
+title('Pendulum - 2')
+xlabel('Time')
+ylabel('Displacement')
+
+#figure(3)
+subplot(3,1,3)
+plot(ta,va, tb,vb)
+title('Coupled Pendula')
+xlabel('Time')
+ylabel('Displacement')
+
+plt.tight_layout() #this function from matplotlib provides spacing between subgraphs
+show()
+
+'''
 figure(1)      
 plot(ta,va)
 figure(2)
@@ -36,3 +61,4 @@ plot(tb,vb)
 figure(3)
 plot(ta,va, tb,vb)
 show()
+,,,
