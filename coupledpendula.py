@@ -1,5 +1,8 @@
 '''
 connect motor of pendulum1 to IN and GND, OUT to A1
+Connect motor of pendulum2 to IN and GND of another ExpEYES box. Connect OUT to Channel A2 of the first ExpEYES box.
+
+Note: Second ExpEYES box must be connected and detected by CROPLUS program, then run coupledpendula.py so that first ExpEYES box will be detected.
 '''
 from pylab import *
 import expeyes.eyesj, time
