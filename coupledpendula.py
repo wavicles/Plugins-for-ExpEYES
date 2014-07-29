@@ -1,4 +1,6 @@
-
+'''
+connect motor of pendulum1 to IN and GND, OUT to A1
+'''
 from pylab import *
 import expeyes.eyesj, time
 p = expeyes.eyesj.open()
