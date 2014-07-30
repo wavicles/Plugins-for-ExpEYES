@@ -28,7 +28,7 @@ while 1:
     tm2 = res2[0] - start			# elapsed time
     tb.append(tm2)
     vb.append(res2[1])
-    ss = '%6.3f %6.3f'%(tm,res[1],tm2,res2[1])
+    ss = '%6.3f %6.3f %6.3f %6.3f'%(tm,res[1],tm2,res2[1])
     print ss
     f.write(ss+'\n')
     if tm > DURATION:
