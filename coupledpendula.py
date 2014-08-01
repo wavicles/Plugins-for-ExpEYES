@@ -4,6 +4,7 @@ Connect motor of pendulum2 to IN and GND of another ExpEYES box. Connect OUT to 
 Note: Second ExpEYES box must be connected and detected by CROPLUS program, then run coupledpendula.py so that first ExpEYES box will be detected.
 
 This experiment can be done in three different ways 
+
 1. both the pendula oscillating in-phase
 2. Both the pendula oscillating out-of-phase
 3. One pendulum at rest while other is set in to oscillations.
@@ -63,6 +64,7 @@ plt.tight_layout() #this function from matplotlib provides spacing between subgr
 show()
 
 '''
+# This code can be used to have plots in separate figures
 figure(1)      
 plot(ta,va)
 figure(2)
