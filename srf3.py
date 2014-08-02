@@ -23,6 +23,7 @@ while et < 20:
 	time.sleep(0.1)
 
 
+
 import numpy as np
 import matplotlib.pyplot as plt
 data = np.loadtxt('srf.dat')
