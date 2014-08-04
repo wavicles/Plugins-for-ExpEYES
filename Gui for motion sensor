@@ -1,7 +1,6 @@
 ''
-expEYES program
-Author : Praveen Patil
-License : GNU GPL version 3
+expEYES program for srf 05 module
+
 '''
 import gettext
 gettext.bindtextdomain("expeyes")
