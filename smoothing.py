@@ -1,4 +1,5 @@
 # Example Usage:
+# use srf.dat and obtain the grsphs
 #python sg.py position.dat 7 2
 
 import math
