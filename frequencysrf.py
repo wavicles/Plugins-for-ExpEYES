@@ -12,7 +12,7 @@ strt = time.time()
 
 et =0
 while et < 30:
-	dist = p.srfechotime(8,3)
+	dist = p.srfechotime(8,3) # for using two srf modules use 8,3 or 9,0 channels
 	et = time.time() - strt
 	ta.append(et)
 	da.append(dist)
