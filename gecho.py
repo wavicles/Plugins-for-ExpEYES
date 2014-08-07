@@ -1,3 +1,6 @@
+'''
+program for detecting the and measuring the position of object 
+'''
 from Tkinter import *
 import expeyes.eyesj, time, sys
 
