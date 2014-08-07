@@ -1,3 +1,6 @@
+'''
+pendulum waveform in real time using srf eco module
+'''
 import gettext
 gettext.bindtextdomain("expeyes")
 gettext.textdomain('expeyes')
