@@ -1,3 +1,6 @@
+'''
+program to plot real time graphs for coupled pendulums
+'''
 import gettext
 gettext.bindtextdomain("expeyes")
 gettext.textdomain('expeyes')
