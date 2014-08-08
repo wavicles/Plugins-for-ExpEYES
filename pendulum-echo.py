@@ -1,5 +1,5 @@
 '''
-pendulum waveform in real time using srf eco module
+ExpEYS program for pendulum waveform in real time using srf eco module
 '''
 import gettext
 gettext.bindtextdomain("expeyes")
