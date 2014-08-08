@@ -164,5 +164,6 @@ mf.pack(side=TOP,  fill = BOTH, expand = 1)
 msg = Label(mf,text=_('Message'), fg = 'blue')
 msg.pack(side=LEFT)
 
+eyeplot.pop_image('pics/image-name.png', _('Study of Linear Motion using Air-Track'))
 root.title(_('ExpEYES: Linear Motion on Air Track'))
 root.mainloop()
