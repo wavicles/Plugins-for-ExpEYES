@@ -1,6 +1,9 @@
 '''
-expEYES program for study of linear motion on air-track
+expEYES program
+Developed as a part of GSoC Project " Plugins-For-ExpEYES"
 License : GNU GPL version 3
+
+Programe to plot position time graph for vehicles moving on linear air-track
 
 '''
 import gettext
@@ -132,6 +135,6 @@ msgwin = Label(mf,text=_('Message'), fg = 'blue')
 msgwin.pack(side=LEFT, anchor = S, fill=BOTH, expand=1)
 
 
-#eyeplot.pop_image('pics/imagename.png', _('image title...Air-track Linear Motion....'))
-root.title(_('Study of Linear Motion'))
+eyeplot.pop_image('pics/image-name.png', _('Study of Linear Motion using Air-Track'))
+root.title(_('Study of Linear Motion on Air-Track'))
 root.mainloop()
