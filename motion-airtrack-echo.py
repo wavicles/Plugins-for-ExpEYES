@@ -1,5 +1,5 @@
 '''
-expEYES program
+expEYES program for study of linear motion on air-track
 License : GNU GPL version 3
 
 '''
@@ -132,6 +132,6 @@ msgwin = Label(mf,text=_('Message'), fg = 'blue')
 msgwin.pack(side=LEFT, anchor = S, fill=BOTH, expand=1)
 
 
-#eyeplot.pop_image('pics/pend-wave.png', _('Air-track Linear Motion....'))
+#eyeplot.pop_image('pics/imagename.png', _('image title...Air-track Linear Motion....'))
 root.title(_('Study of Linear Motion'))
 root.mainloop()
