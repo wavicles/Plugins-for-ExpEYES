@@ -16,7 +16,7 @@ vs = 0.034000
 class Pend:
 	tv = [ [], [] ]		# Lists for Readings
 	TIMER = 10			# Time interval between reads
-	MINY = 0		# Voltage range
+	MINY = 0		# distance range from
 	MAXY = 80
 	running = False
 	MAXTIME = 10
@@ -129,6 +129,6 @@ msgwin = Label(mf,text=_('Message'), fg = 'blue')
 msgwin.pack(side=LEFT, anchor = S, fill=BOTH, expand=1)
 
 
-eyeplot.pop_image('pics/pend-wave.png', _('Pendulum Oscillations'))
+eyeplot.pop_image('pics/imagename.png', _('Pendulum Oscillations'))
 root.title(_('Oscillations of Pendulum'))
 root.mainloop()
