@@ -37,6 +37,7 @@ class Pend:
 		self.tv = [ [], [] ]
 		try:
 			self.MAXTIME = int(DURATION.get())
+			self.MAXY = int(MAXDIST.get())
 			g.setWorld(0, self.MINY, self.MAXTIME, self.MAXY,_('Time'),_('Dist'))
 			Dur.config(state=DISABLED)
 			self.msg(_('Starting the Measurements'))
@@ -108,6 +109,14 @@ Dur =Entry(cf, width=5, bg = 'white', textvariable = DURATION)
 DURATION.set('10')
 Dur.pack(side = LEFT, anchor = SW)
 b3 = Label(cf, text = _('Seconds.'))
+b3.pack(side = LEFT, anchor = SW)
+b3 = Label(cf, text = _('Max Dist='))
+b3.pack(side = LEFT, anchor = SW)
+MAXDIST = StringVar()
+Dis =Entry(cf, width=5, bg = 'white', textvariable = MAXDIST)
+MAXDIST.set('60')
+Dis.pack(side = LEFT, anchor = SW)
+b3 = Label(cf, text = _('cm'))
 b3.pack(side = LEFT, anchor = SW)
 
 cf = Frame(root, width = WIDTH, height = 10)
