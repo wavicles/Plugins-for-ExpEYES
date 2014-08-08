@@ -1,5 +1,10 @@
 '''
-program to plot real time graphs for coupled pendulums
+expEYES program
+Developed as a part of GSoC project  " Plugins-for-ExpEYES "
+License : GNU GPL version 3
+
+Program to plot oscillations of TWO coupled pendulums in real-time
+
 '''
 import gettext
 gettext.bindtextdomain("expeyes")
@@ -13,7 +18,7 @@ WIDTH  = 600   # width of drawing canvas
 HEIGHT = 400   # height    
 
 class Pend:
-	tv = [ [], [], [] ]		# Lists for Readings
+	tv = [ [], [], [] ]		# Three Lists for Readings time, v1 and v2
 	TIMER = 5			# Time interval between reads
 	MINY = -5			# Voltage range
 	MAXY = 5
@@ -78,13 +83,13 @@ class Pend:
 	def clear(self):
 		if self.running == True:
 			return
-		self.tv = [ [], [] ]
+		self.tv = [ [], [], []  ]
 		g.delete_lines()
 		self.msg(_('Cleared Data and Trace'))
 
 	def msg(self,s, col = 'blue'):
 		msgwin.config(text=s, fg=col)
-
+		
 
 p = eyes.open()
 p.disable_actions()
@@ -131,6 +136,6 @@ msgwin = Label(mf,text=_('Message'), fg = 'blue')
 msgwin.pack(side=LEFT, anchor = S, fill=BOTH, expand=1)
 
 
-eyeplot.pop_image('pics/pend-wave.png', _('Pendulum Oscillations'))
-root.title(_('Oscillations of Pendulum'))
+eyeplot.pop_image('pics/image-name.png', _('Coupled Pendulum Oscillations'))  # save the image in the same directory as of the program
+root.title(_('Oscillations of Coupled Pendulums'))
 root.mainloop()
