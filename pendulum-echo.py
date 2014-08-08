@@ -1,5 +1,8 @@
 '''
-ExpEYS program for pendulum waveform in real time using srf eco module
+GSoC  ExpEYES program
+License : GNU GPL version 3
+
+Program to study oscillations of a pendulum using ultrasonic sensor sfr05 (position detector)
 '''
 import gettext
 gettext.bindtextdomain("expeyes")
@@ -16,8 +19,8 @@ vs = 0.034000
 class Pend:
 	tv = [ [], [] ]		# Lists for Readings
 	TIMER = 10			# Time interval between reads
-	MINY = 0		# distance range from
-	MAXY = 80
+	MINY = 0		# Distance range from
+	MAXY = 50
 	running = False
 	MAXTIME = 10
 
@@ -32,6 +35,7 @@ class Pend:
 		self.tv = [ [], [] ]
 		try:
 			self.MAXTIME = int(DURATION.get())
+			self.MAXY= int(MAXDIST.get())
 			g.setWorld(0, self.MINY, self.MAXTIME, self.MAXY,_('Time'),_('cm'))
 			Dur.config(state=DISABLED)
 			self.msg(_('Starting the Measurements'))
@@ -86,6 +90,7 @@ class Pend:
 
 p = eyes.open()
 p.disable_actions()
+p.set_state(10,1)
 root = Tk()
 Canvas(root, width = WIDTH, height = 5).pack(side=TOP)  # Some space at the top
 g = eyeplot.graph(root, width=WIDTH, height=HEIGHT, bip=False)	# make plot objects using draw.disp
@@ -103,6 +108,15 @@ DURATION.set('10')
 Dur.pack(side = LEFT, anchor = SW)
 b3 = Label(cf, text = _('Seconds.'))
 b3.pack(side = LEFT, anchor = SW)
+
+b4 = Label(cf, text = _('Max Dist='))
+b4.pack(side = LEFT, anchor = SW)
+MAXDIST = StringVar()
+Dis =Entry(cf, width=5, bg = 'white', textvariable = MAXDIST)
+MAXDIST.set('60')
+Dis.pack(side = LEFT, anchor = SW)
+b4 = Label(cf, text = _('cm'))
+b4.pack(side = LEFT, anchor = SW)
 
 cf = Frame(root, width = WIDTH, height = 10)
 cf.pack(side=TOP,  fill = BOTH, expand = 1)
@@ -130,5 +144,6 @@ msgwin.pack(side=LEFT, anchor = S, fill=BOTH, expand=1)
 
 
 eyeplot.pop_image('pics/imagename.png', _('Pendulum Oscillations'))
-root.title(_('Oscillations of Pendulum'))
+root.title(_('Oscillations of Pendulum using Motion Sensor'))
 root.mainloop()
+
