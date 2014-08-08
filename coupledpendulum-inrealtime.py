@@ -76,7 +76,7 @@ class Pend:
 		try:
 			fn = filename.get()
 		except:
-			fn = 'pendulum.dat'
+			fn = 'coupledpend.dat'
 		p.save([self.tv],fn)
 		self.msg(_('Data saved to %s')%fn)
 
@@ -89,7 +89,6 @@ class Pend:
 
 	def msg(self,s, col = 'blue'):
 		msgwin.config(text=s, fg=col)
-		
 
 p = eyes.open()
 p.disable_actions()
@@ -125,7 +124,7 @@ b3 = Button(cf, text = _('SAVE to'), command = pen.save)
 b3.pack(side = LEFT, anchor = N)
 filename = StringVar()
 e1 =Entry(cf, width=15, bg = 'white', textvariable = filename)
-filename.set('pendulum.dat')
+filename.set('coupledpend.dat')
 e1.pack(side = LEFT)
 b5 = Button(cf, text = _('QUIT'), command = sys.exit)
 b5.pack(side = RIGHT, anchor = N)
