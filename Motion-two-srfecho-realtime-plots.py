@@ -1,5 +1,10 @@
 '''
-expEYES program to use two motion sensors (srf-05 modules)
+expEYES program
+Developed as a part of GSoC Project "Plugins-for-ExpEYES"
+
+this program allows user to use TWO motion sensors (srf-05 modules) and plot both the graphs
+in real-time.
+This can be used for studying collisions, conservation of momentum etc...
 '''
 import gettext
 gettext.bindtextdomain("expeyes")
@@ -32,6 +37,7 @@ class Pend:
 		self.tv = [ [], [], [] ]
 		try:
 			self.MAXTIME = int(DURATION.get())
+			self.MAXY = int(MAXDIST.get())
 			g.setWorld(0, self.MINY, self.MAXTIME, self.MAXY,_('Time'),_('cm'))
 			Dur.config(state=DISABLED)
 			self.msg(_('Starting the Measurements'))
@@ -106,6 +112,14 @@ Dur =Entry(cf, width=5, bg = 'white', textvariable = DURATION)
 DURATION.set('10')
 Dur.pack(side = LEFT, anchor = SW)
 b3 = Label(cf, text = _('Seconds.'))
+b3.pack(side = LEFT, anchor = SW)
+b3 = Label(cf, text = _('Max Dist='))
+b3.pack(side = LEFT, anchor = SW)
+MAXDIST = StringVar()
+Dis =Entry(cf, width=5, bg = 'white', textvariable = MAXDIST)
+MAXDIST.set('60')
+Dis.pack(side = LEFT, anchor = SW)
+b3 = Label(cf, text = _('cm'))
 b3.pack(side = LEFT, anchor = SW)
 
 cf = Frame(root, width = WIDTH, height = 10)
