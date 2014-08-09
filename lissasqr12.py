@@ -1,4 +1,5 @@
 '''
+Program to plot lissajous figures by setting SQR1and SQR2 with some phase difference
 connect sqr1 to  A1 and and sqr2 to A2.
 '''
 
