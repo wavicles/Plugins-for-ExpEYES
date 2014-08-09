@@ -1,4 +1,5 @@
 #import numpy functions and types
+#Program to plot lissajous figures using pylab functions
 from pylab import *
 
 t = arange(0, 2*pi, pi/400)
