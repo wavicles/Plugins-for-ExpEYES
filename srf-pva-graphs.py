@@ -1,3 +1,12 @@
+'''
+expEYES program
+Developed as a part of GSoC project  " Plugins-for-ExpEYES "
+License : GNU GPL version 3
+
+Program to plot position, velocity and acceleration time graphs.
+It stores data in srf.dat and then plots the graphs after calculation of velocity and acceleration....
+'''
+
 from pylab import *
 
 import expeyes.eyesj, time
