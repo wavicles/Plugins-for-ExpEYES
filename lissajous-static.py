@@ -2,6 +2,14 @@
 expEYES lissajous program
 Developed as a part of GSoC Project "Plugins for ExpEYES"
 License : GNU GPL version 3
+
+connect AATINY85 module to IN1 and IN2 
+black wire to GND
+Green is SQR input (pin 2)
+Red is output (pin 3)
+Module can be powered using USB or external USB adapter.
+the second module can be powered fron first from (P2VUSB pin)
+pin P1 can be touched to groung to RESET
 '''
 import gettext
 gettext.bindtextdomain("expeyes")
