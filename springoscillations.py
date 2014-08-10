@@ -1,7 +1,10 @@
 '''
 ExpEYES Program
 Developed as a part of GSoC Project " Plugins for ExpEYES"
+License : GNU GPL version 3
 
+Program to plot oscillations of a spring loaded with mass and determine spring constant 
+Use DC motor as sensor...............
 '''
 
 from pylab import *
