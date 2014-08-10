@@ -1,3 +1,9 @@
+'''
+ExpEYES Program
+Developed as a part of GSoC Project " Plugins for ExpEYES"
+
+'''
+
 from pylab import *
 import expeyes.eyesj, time
 p = expeyes.eyesj.open()
