@@ -186,7 +186,6 @@ Nsam = Entry(cf,width = 4, bg = 'white')
 Nsam.pack(side=LEFT, anchor = SW)
 Nsam.insert(END,'400')
 
-'''
 #========================= Right Side panel ===========================================
 rf = Frame( width = 75, height = HEIGHT)
 rf.pack(side=LEFT,  fill = BOTH, expand = 1)
@@ -194,9 +193,8 @@ rf.pack(side=LEFT,  fill = BOTH, expand = 1)
 #---------------------- Extra Features -----------------------------
 cf = Frame(rf, border = 1, relief = SUNKEN)
 cf.pack(side=TOP,  fill = BOTH, expand = 1)
-'''
 
-Label(cf, text = _('Setting Squarewaves'), fg='blue').pack(side=TOP)
+label(cf, text = _('Setting Squarewaves'), fg='blue').pack(side=TOP)
 f = Frame(cf)
 f.pack(side=TOP, anchor = W)
 Freq = Entry(f, width = 6)
@@ -230,7 +228,7 @@ A0.set(0)
 
 Freq0 = Entry(cf,width = 10, bg = 'white')
 Freq0.pack(side=LEFT, anchor = SW)
-Freq0.insert(END,'3500')
+Freq0.insert(END,'1500')
 
 A1 = IntVar()
 cb1 = Checkbutton(cf,text =_('SQR2='), variable=A1, fg = 'blue')
@@ -238,7 +236,7 @@ cb1.pack(side=LEFT, anchor = SW)
 A1.set(0)
 Freq = Entry(cf,width = 10, bg = 'white')
 Freq.pack(side=LEFT, anchor = SW)
-Freq.insert(END,'3600')
+Freq.insert(END,'1000')
 
 Start = Button(cf,text =_('START'), command = start, fg = 'blue')
 Start.pack(side=LEFT, anchor = SW)
