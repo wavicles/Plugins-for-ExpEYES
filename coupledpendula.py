@@ -1,4 +1,9 @@
 '''
+GSoC ExpEYES program
+License : GNU GPL version 3
+Program to study oscillations of coupled pendulum.
+
+
 connect motor of pendulum1 to IN and GND, OUT to A1
 Connect motor of pendulum2 to IN and GND of another ExpEYES box. Connect OUT to Channel A2 of the first ExpEYES box.
 Note: Second ExpEYES box must be connected and detected by CROPLUS program, then run coupledpendula.py so that first ExpEYES box will be detected.
@@ -10,6 +15,10 @@ This experiment can be done in three different ways
 3. One pendulum at rest while other is set in to oscillations.
 '''
 
+import gettext
+gettext.bindtextdomain("expeyes")
+gettext.textdomain('expeyes')
+_ = gettext.gettext
 from pylab import *
 import expeyes.eyesj, time
 p = expeyes.eyesj.open()
