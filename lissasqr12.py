@@ -1,8 +1,15 @@
 '''
+expEYES program
+Developed as a part of GSoC Project "Plugins-for-ExpEYES"
 Program to plot lissajous figures by setting SQR1and SQR2 with some phase difference
 connect sqr1 to  A1 and and sqr2 to A2.
+
 '''
 
+import gettext
+gettext.bindtextdomain("expeyes")
+gettext.textdomain('expeyes')
+_ = gettext.gettext
 from pylab import *
 import expeyes.eyesj
 p = expeyes.eyesj.open()
