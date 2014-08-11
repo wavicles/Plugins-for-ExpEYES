@@ -1,3 +1,18 @@
+'''
+expEYES program
+Developed as a part of GSoC Project "Plugins-for-ExpEYES"
+
+
+this program allows user to use  motion sensors (srf-05 modules) and plot both the graph of oscillations 
+of a loaded spring and calculate frequency.
+
+'''
+import gettext
+gettext.bindtextdomain("expeyes")
+gettext.textdomain('expeyes')
+_ = gettext.gettext
+
+
 from pylab import *
 import expeyes.eyesj, time
 p = expeyes.eyesj.open()
