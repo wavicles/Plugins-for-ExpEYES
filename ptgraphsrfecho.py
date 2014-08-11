@@ -1,5 +1,6 @@
 '''
 expEYES program
+Developed as a part of GSoC Project " Plugins for ExpEYES"
 
 connect gnd to ground, echo to sen, trig to sqr2 and od1 to vcc of srf5
 '''
