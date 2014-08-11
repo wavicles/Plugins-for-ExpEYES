@@ -1,8 +1,15 @@
 '''
+ExpEYES Program 
+Developed as a part of GSoC Project "Plugins-for-ExpEYES"
+
 Program to plot lissajous figures using sin and phase diff added using capacitor.
 connect sin ti A1 and a 1 microfarad capacitor from A1 to A2. Connect 1K resistor from A2 to GND. Capture voltage before and after the capacitor.
 '''
 
+import gettext
+gettext.bindtextdomain("expeyes")
+gettext.textdomain('expeyes')
+_ = gettext.gettext
 
 import expeyes.eyesj
 p = expeyes.eyesj.open()
