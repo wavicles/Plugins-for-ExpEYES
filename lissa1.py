@@ -1,3 +1,8 @@
+'''
+expEYES program
+Developed as a part of GSoC Project "Plugins-for-ExpEYES"
+
+'''
 #import numpy functions and types
 #Program to plot lissajous figures using pylab functions
 from pylab import *
