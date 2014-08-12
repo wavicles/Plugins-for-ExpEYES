@@ -1,3 +1,13 @@
+'''
+expEYES program
+Developed as a part of GSoC Project "Plugins-for-ExpEYES"
+
+'''
+import gettext
+gettext.bindtextdomain("expeyes")
+gettext.textdomain('expeyes')
+_ = gettext.gettext
+
 from pylab import *
 import expeyes.eyesj, time
 p = expeyes.eyesj.open()
