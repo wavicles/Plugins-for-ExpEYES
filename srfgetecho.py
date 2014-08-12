@@ -2,9 +2,7 @@
 
 expEYES program
 Developed as a part of GSoC Project "Plugins-for-ExpEYES"
-this program allows user to use TWO motion sensors (srf-05 modules) and plot both the graphs
-in real-time.
-This can be used for studying collisions, conservation of momentum etc...
+
 '''
 import gettext
 gettext.bindtextdomain("expeyes")
