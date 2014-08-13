@@ -6,6 +6,10 @@ Similar functions are: ltpulse2rtime(out, in) , htpulse2ftime(out, in) and ltpul
 Wire a monoshot using IC555. Connect pin2 of 555 to OD1 and pin3 to IN1
 Power the IC from SQR2
 '''
+import gettext
+gettext.bindtextdomain("expeyes")
+gettext.textdomain('expeyes')
+_ = gettext.gettext
 
 import expeyes.eyesj
 p = expeyes.eyesj.open()
