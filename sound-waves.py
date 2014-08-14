@@ -1,5 +1,7 @@
 '''
 expEYES program
+This is the GUI for doing all sound experiments
+Developed as a part og GSoC project " Pligins for ExpEYES"
 
 License : GNU GPL version 3
 '''
