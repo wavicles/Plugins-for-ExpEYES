@@ -1,5 +1,7 @@
 '''
 expEYES program
+Developed as a part of GSoc project " Plugins for ExpEYES"
+
 Dampaed oscillations of spring in various media like air, water oil or glycerine
 '''
 import gettext
