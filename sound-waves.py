@@ -80,21 +80,7 @@ def stop():
 def msg(s, col='blue'):
 	msgwin.config(text=s, fg=col)
 
-def set_sqr1():
-	state = int(Sqr1.get())
-	if state == 0:
-		p.set_sqr1(-1)
-		msg(_('SQR1 set to LOW'))
-	else:
-		try:
-			fr = float(Freq.get())
-			res = p.set_sqr1(fr)
-			if res == None:
-				msg(_('Enter a value between .7 to 200000 Hz'))
-			else:
-				msg(_('SQR1 set to %5.1f Hertz') %res)
-		except:
-			msg(_('Enter valid frequency, in Hertz'),'red')
+
 
 def set_sqr2():
 	state = int(Sqr2.get())
