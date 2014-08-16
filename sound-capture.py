@@ -1,3 +1,8 @@
+'''
+expEYES program
+Developed as a part of GSoC Project "Plugins for ExpEYES"
+License : GNU GPL version 3
+'''
 
 
 from Tkinter import *
