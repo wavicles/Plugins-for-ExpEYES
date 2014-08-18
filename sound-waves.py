@@ -5,6 +5,7 @@ Developed as a part og GSoC project " Pligins for ExpEYES"
 
 License : GNU GPL version 3
 
+
 '''
 import gettext
 gettext.bindtextdomain("expeyes")
@@ -31,10 +32,13 @@ def update():
 	data = []
 	if NP <= 900:
 		t,v = p.capture_hr(1,NP,delay)
+		t2,v2 = p.capture_hr(2,NP,delay)
 	else:
 		t,v = p.capture(1,NP,delay)
+		t2,v2 = p.capture(2,NP,delay)
 	g.delete_lines()
 	g.line(t,v)
+	g.line(t2,v2)
 	data.append([t,v])
 	fa = eyemath.fit_sine(t, v)
 	if fa != None:
@@ -165,6 +169,23 @@ def xmgrace():		# Send the data to Xmgrace
 def quit():
 	sys.exit()
 
+def pop_expt_menu(event):
+	poped = True
+	menu.post(event.x_root, event.y_root)
+def reconnect():
+	global p
+	import expeyes.eyesj
+	p=expeyes.eyesj.open()
+	if p == None:
+		msg(_('expEYES Junior NOT found. Bad connection or another program using it'),'red')
+	else:
+		Recon.forget()
+		s = _('Four Channel CRO+ found expEYES-Junior on %s') %p.device
+		root.title(s)
+		msg(s)
+		root.after(TIMER,update)
+#=============================== main program starts here ===================================
+
 p = eyes.open()
 p.set_sqr1(0)
 
@@ -172,9 +193,12 @@ root = Tk()
 #top = Frame(root)
 #top.pack(side=TOP, anchor =W)
 Canvas(root, width = WIDTH, height = 5).pack(side=TOP)  # Some space at the top
-g = eyeplot.graph(root, width=WIDTH, height=HEIGHT)	# make plot objects using draw.disp
-g.setWorld(0,-5, NP * delay * 0.001, 5,_('mS'),_('V'))
 
+g1 = eyeplot.graph(root, width=WIDTH, height=HEIGHT)	# make plot objects using draw.disp
+g1.setWorld(0,-5, NP * delay * 0.001, 5,_('mS'),_('V'))
+
+g2 = eyeplot.graph(root, width=WIDTH, height=HEIGHT)	# make plot objects using draw.disp
+g2.setWorld(0,-5, NP * delay * 0.001, 5,_('mS'),_('V'))
 if p == None:
 	g.text(0, 0,_('EYES Hardware Not Found. Check Connections and restart the program'),1)
 	root.mainloop()
