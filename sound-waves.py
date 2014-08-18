@@ -4,6 +4,7 @@ This is the GUI for doing all sound experiments
 Developed as a part og GSoC project " Pligins for ExpEYES"
 
 License : GNU GPL version 3
+
 '''
 import gettext
 gettext.bindtextdomain("expeyes")
@@ -80,7 +81,21 @@ def stop():
 def msg(s, col='blue'):
 	msgwin.config(text=s, fg=col)
 
-
+def set_sqr1():
+	state = int(Sqr1.get())
+	if state == 0:
+		p.set_sqr1(-1)
+		msg(_('SQR1 set to LOW'))
+	else:
+		try:
+			fr = float(Freq.get())
+			res = p.set_sqr1(fr)
+			if res == None:
+				msg(_('Enter a value between .7 to 200000 Hz'))
+			else:
+				msg(_('SQR1 set to %5.1f Hertz') %res)
+		except:
+			msg(_('Enter valid frequency, in Hertz'),'red')
 
 def set_sqr2():
 	state = int(Sqr2.get())
@@ -182,7 +197,8 @@ rf.pack(side=LEFT,  fill = BOTH, expand = 1)
 cf = Frame(rf, border = 1, relief = SUNKEN)
 cf.pack(side=TOP,  fill = BOTH, expand = 1)
 
-label(cf, text = _('Setting Squarewaves'), fg='blue').pack(side=TOP)
+
+Label(cf, text = _('Setting Squarewaves'), fg='blue').pack(side=TOP)
 f = Frame(cf)
 f.pack(side=TOP, anchor = W)
 Freq = Entry(f, width = 6)
@@ -216,7 +232,7 @@ A0.set(0)
 
 Freq0 = Entry(cf,width = 10, bg = 'white')
 Freq0.pack(side=LEFT, anchor = SW)
-Freq0.insert(END,'1500')
+Freq0.insert(END,'3500')
 
 A1 = IntVar()
 cb1 = Checkbutton(cf,text =_('SQR2='), variable=A1, fg = 'blue')
@@ -224,7 +240,7 @@ cb1.pack(side=LEFT, anchor = SW)
 A1.set(0)
 Freq = Entry(cf,width = 10, bg = 'white')
 Freq.pack(side=LEFT, anchor = SW)
-Freq.insert(END,'1000')
+Freq.insert(END,'3600')
 
 Start = Button(cf,text =_('START'), command = start, fg = 'blue')
 Start.pack(side=LEFT, anchor = SW)
@@ -251,6 +267,6 @@ mf.pack(side=TOP, anchor = SW)
 msgwin = Label(mf,text = _('Messages'), fg = 'blue')
 msgwin.pack(side=LEFT, anchor = SW)
 
-eyeplot.pop_image('pics/image-name.png', _('Study of sound and waves'))
-root.title(_('EYES: Study of sound'))
+
+root.title(_('EYES: Study of sound and waves'))
 root.mainloop()
