@@ -4,6 +4,7 @@
 # Pin 2 VCC  Connect to PVS of ExpEYES at +5V
 # Pin 3 Output  to IN1 / A1
 # Pin 4  GND  Between pin 2 and 4 connect a 100nF capacitor
+# Result needs to be calibrated.
 
 
 import pylab
