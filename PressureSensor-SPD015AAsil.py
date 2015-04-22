@@ -1,3 +1,5 @@
+
+#Absolute Pressure Sensor  SPD015AAsil by SMARTEC is used 
 # Pin 1 and Pin 5 not connected
 # Pin 2 VCC  Connect to PVS of ExpEYES at +5V
 # Pin 3 Output  to IN1 / A1
