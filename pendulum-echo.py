@@ -18,6 +18,10 @@ else:
 
 sys.path=[".."] + sys.path
 
+import expeyes.eyesj as eyes
+import expeyes.eyeplot as eyeplot
+import expeyes.eyemath as eyemath
+
 WIDTH  = 600   # width of drawing canvas
 HEIGHT = 400   # height    
 vs = 0.034000
