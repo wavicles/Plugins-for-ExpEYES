@@ -1,6 +1,7 @@
 '''
 expEYES program
-Developed as a part of GSoC project  " Plugins-for-ExpEYES "
+Author  : Praveen Patil, Ajith Kumar B.P
+Developed as a part of GSoC- project  
 License : GNU GPL version 3
 
 Program to plot oscillations of TWO coupled pendulums in real-time
@@ -11,8 +12,18 @@ gettext.bindtextdomain("expeyes")
 gettext.textdomain('expeyes')
 _ = gettext.gettext
 
-from Tkinter import *
-import expeyes.eyesj as eyes, expeyes.eyeplot as eyeplot,  time, sys, math
+
+import time, math, sys
+if sys.version_info.major==3:
+        from tkinter import *
+else:
+        from Tkinter import *
+
+sys.path=[".."] + sys.path
+
+import expeyes.eyesj as eyes
+import expeyes.eyeplot as eyeplot
+import expeyes.eyemath as eyemath
 
 WIDTH  = 600   # width of drawing canvas
 HEIGHT = 400   # height    
