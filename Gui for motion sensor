@@ -1,4 +1,12 @@
+'''
+expEYES program
+Author  : Praveen Patil
+Developed as a part of GSoC- project  
+License : GNU GPL version 3
 
+Program to interface SRF-05 motion sensor and fetch data
+
+'''
 
 import gettext
 gettext.bindtextdomain("expeyes")
