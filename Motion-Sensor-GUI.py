@@ -1,13 +1,14 @@
 '''
-expEYES program
-Developed as a part of GSoC Project "Plugins-for-ExpEYES"
+ExpEYES program for Ultrasonic Motion Sensor SRF-o5
+Developed as a part of GSoC Project 
+Mentor Organization: FOSSASIA www.fossasia.org
 Authors: Praveen Patil, Dr. Ajith Kumar
 License : GNU GPL version 3
 
 This program allows user to ultrasonic motion sensors (SRF-05 module) and plot both the graphs
 in real-time.
 
-connect gnd to ground, echo to sen, trig to sqr2 and od1 to vcc of SRF-05
+Connect gnd to ground, echo to sen, trig to sqr2 and od1 to vcc of SRF-05
 '''
 
 import gettext
@@ -17,7 +18,7 @@ _ = gettext.gettext
 
 import time, math, sys
 if sys.version_info.major==3:
-        from tkinter import *
+        from tkinter import *       #support for python 3
 else:
         from Tkinter import *
 
@@ -27,16 +28,14 @@ import expeyes.eyesj as eyes
 import expeyes.eyeplot as eyeplot
 import expeyes.eyemath as eyemath
 
-
-
 #from Tkinter import *
 #import expeyes.eyesj as eyes, expeyes.eyeplot as eyeplot,  time, sys, math
 
-WIDTH  = 600   # width of drawing canvas
+WIDTH  = 800   # width of drawing canvas
 HEIGHT = 400   # height    
 vs = 0.034000
 
-class Pend:
+class Motion:
 	tv = [ [], [], [] ]		# Lists for Readings
 	TIMER = 10			# Time interval between reads
 	MINY = 0		
@@ -117,7 +116,7 @@ p.set_state(10,1) # makes OD1 High
 root = Tk()
 Canvas(root, width = WIDTH, height = 5).pack(side=TOP)  # Some space at the top
 g = eyeplot.graph(root, width=WIDTH, height=HEIGHT, bip=False)	# make plot objects using draw.disp
-pen = Pend()
+pen = Motion()
 
 cf = Frame(root, width = WIDTH, height = 10)
 cf.pack(side=TOP,  fill = BOTH, expand = 1)
