@@ -15,12 +15,22 @@ gettext.bindtextdomain("expeyes")
 gettext.textdomain('expeyes')
 _ = gettext.gettext
 
+import time, math, sys
+if sys.version_info.major==3:
+        from tkinter import *
+else:
+        from Tkinter import *
+
+sys.path=[".."] + sys.path
+
+import expeyes.eyesj as eyes
+import expeyes.eyeplot as eyeplot
+import expeyes.eyemath as eyemath
 
 
 
-
-from Tkinter import *
-import expeyes.eyesj as eyes, expeyes.eyeplot as eyeplot,  time, sys, math
+#from Tkinter import *
+#import expeyes.eyesj as eyes, expeyes.eyeplot as eyeplot,  time, sys, math
 
 WIDTH  = 600   # width of drawing canvas
 HEIGHT = 400   # height    
@@ -156,5 +166,5 @@ msgwin.pack(side=LEFT, anchor = S, fill=BOTH, expand=1)
 
 
 #eyeplot.pop_image('pics/imagename.png', _('write the name of expt setup image'))
-root.title(_('Motion Graph using Ultrasonic Position Sensor SRF-05'))
+root.title(_('Motion Graph using Position Sensor SRF-05'))
 root.mainloop()
