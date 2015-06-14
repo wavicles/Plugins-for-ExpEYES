@@ -9,9 +9,21 @@ connect sin ti A1 and a 1 microfarad capacitor from A1 to A2. Connect 1K resisto
 import gettext
 gettext.bindtextdomain("expeyes")
 gettext.textdomain('expeyes')
-_ = gettext.gettext
+_ = gettext.gettext  
 
-import expeyes.eyesj
+
+
+import time, math, sys
+if sys.version_info.major==3:
+	from tkinter import *
+else:
+        from Tkinter import *
+
+sys.path=[".."] + sys.path
+
+import expeyes.eyesj as eyes
+import expeyes.eyeplot as eyeplot
+
 p = expeyes.eyesj.open()
 
 from pylab import *
