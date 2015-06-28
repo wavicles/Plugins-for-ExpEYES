@@ -1,5 +1,6 @@
 ''''
-Program for working with photogates
+Program for working with photogates tomeasure time period of oscillating pendulum
+
 '''
 import gettext
 gettext.bindtextdomain("expeyes")
