@@ -1,10 +1,22 @@
-from pylab import *
-import expeyes.eyesj, time
+
+import time, math, sys
+if sys.version_info.major==3:
+        from tkinter import *
+else:
+        from Tkinter import *
+
+sys.path=[".."] + sys.path
+
+import expeyes.eyesj as eyes
+import expeyes.eyeplot as eyeplot
+import expeyes.eyemath as eyemath
+
+
 p = expeyes.eyesj.open()
 
 p.set_state(10,1)
 
-f = open('srf.dat','r')   # errors were beacuse file in only in write mode so changed to 'r+'
+f = open('srf.dat','r+')   # errors were beacuse file in only in write mode so changed to 'r+'
 
 ta = []
 da = []
