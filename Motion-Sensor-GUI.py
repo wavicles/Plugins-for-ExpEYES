@@ -33,7 +33,8 @@ import expeyes.eyemath as eyemath
 
 WIDTH  = 800   # width of drawing canvas
 HEIGHT = 400   # height    
-vs = 0.034000
+vs = 0.034000 # speed of ultrasonic waves in air
+
 
 class Motion:
 	tv = [ [], [], [] ]		# Lists for Readings
